@@ -1,0 +1,12 @@
+E:\play\MyProject\Web\bin\Web.dll
+E:\play\MyProject\Web\bin\Web.pdb
+E:\play\MyProject\Web\obj\Debug\Web.dll
+E:\play\MyProject\Web\obj\Debug\Web.pdb
+E:\play\MyProject\Web\bin\DAL.dll
+E:\play\MyProject\Web\bin\DAL.pdb
+E:\play\MyProject\Web\bin\Common.dll
+E:\play\MyProject\Web\bin\Common.pdb
+E:\play\MyProject\Web\bin\Newtonsoft.Json.dll
+E:\play\MyProject\Web\bin\Newtonsoft.Json.pdb
+E:\play\MyProject\Web\bin\Newtonsoft.Json.xml
+E:\play\MyProject\Web\obj\Debug\Web.csprojResolveAssemblyReference.cache

@@ -1,0 +1,4 @@
+E:\play\MyProject\Common\bin\Release\Common.dll
+E:\play\MyProject\Common\bin\Release\Common.pdb
+E:\play\MyProject\Common\obj\Release\Common.dll
+E:\play\MyProject\Common\obj\Release\Common.pdb

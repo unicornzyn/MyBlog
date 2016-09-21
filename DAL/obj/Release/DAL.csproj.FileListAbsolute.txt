@@ -1,0 +1,6 @@
+E:\play\MyProject\DAL\bin\Release\DAL.dll
+E:\play\MyProject\DAL\bin\Release\DAL.pdb
+E:\play\MyProject\DAL\obj\Release\DAL.dll
+E:\play\MyProject\DAL\obj\Release\DAL.pdb
+E:\play\MyProject\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+E:\play\MyProject\DAL\bin\Release\DAL.dll.config

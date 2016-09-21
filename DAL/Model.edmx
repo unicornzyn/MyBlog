@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="dbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="dbModelStoreContainer">
+          <EntitySet Name="Article" EntityType="dbModel.Store.Article" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Feedback" EntityType="dbModel.Store.Feedback" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="R_ArticleTags" EntityType="dbModel.Store.R_ArticleTags" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Reply" EntityType="dbModel.Store.Reply" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tags" EntityType="dbModel.Store.Tags" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="dbModel.Store.Users" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="content" Type="varchar(max)" Nullable="false" />
+          <Property Name="addtime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Feedback">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="content" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="isread" Type="bit" Nullable="false" />
+          <Property Name="addtime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="R_ArticleTags">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="articleid" Type="int" Nullable="false" />
+          <Property Name="tagid" Type="int" Nullable="false" />
+          <Property Name="addtime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Reply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ArticleId" Type="int" Nullable="false" />
+          <Property Name="Rid" Type="int" Nullable="false" />
+          <Property Name="Nick" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Content" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="AddTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tags">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tname" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="sort" Type="int" Nullable="false" />
+          <Property Name="addtime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Passwd" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="UserRole" Type="int" Nullable="false" />
+          <Property Name="AddTime" Type="datetime" Nullable="false" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Article" EntityType="dbModel.Article" />
+          <EntitySet Name="Feedback" EntityType="dbModel.Feedback" />
+          <EntitySet Name="R_ArticleTags" EntityType="dbModel.R_ArticleTags" />
+          <EntitySet Name="Tags" EntityType="dbModel.Tags" />
+          <EntitySet Name="Users" EntityType="dbModel.Users" />
+          <EntitySet Name="Reply" EntityType="dbModel.Reply" />
+        </EntityContainer>
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="content" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="addtime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Feedback">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="content" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="isread" Type="Boolean" Nullable="false" />
+          <Property Name="addtime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="R_ArticleTags">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="articleid" Type="Int32" Nullable="false" />
+          <Property Name="tagid" Type="Int32" Nullable="false" />
+          <Property Name="addtime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tags">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="sort" Type="Int32" Nullable="false" />
+          <Property Name="addtime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Passwd" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UserRole" Nullable="false" />
+          <Property Type="DateTime" Name="AddTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Reply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ArticleId" Nullable="false" />
+          <Property Type="Int32" Name="Rid" Nullable="false" />
+          <Property Type="String" Name="Nick" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Content" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="AddTime" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="dbEntities">
+          <EntitySetMapping Name="Article"><EntityTypeMapping TypeName="dbModel.Article"><MappingFragment StoreEntitySet="Article">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="title" ColumnName="title" />
+            <ScalarProperty Name="content" ColumnName="content" />
+            <ScalarProperty Name="addtime" ColumnName="addtime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Feedback"><EntityTypeMapping TypeName="dbModel.Feedback"><MappingFragment StoreEntitySet="Feedback">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="content" ColumnName="content" />
+            <ScalarProperty Name="isread" ColumnName="isread" />
+            <ScalarProperty Name="addtime" ColumnName="addtime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="R_ArticleTags"><EntityTypeMapping TypeName="dbModel.R_ArticleTags"><MappingFragment StoreEntitySet="R_ArticleTags">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="articleid" ColumnName="articleid" />
+            <ScalarProperty Name="tagid" ColumnName="tagid" />
+            <ScalarProperty Name="addtime" ColumnName="addtime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tags"><EntityTypeMapping TypeName="dbModel.Tags"><MappingFragment StoreEntitySet="Tags">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="tname" ColumnName="tname" />
+            <ScalarProperty Name="sort" ColumnName="sort" />
+            <ScalarProperty Name="addtime" ColumnName="addtime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="dbModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+                <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+                <ScalarProperty Name="Passwd" ColumnName="Passwd" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reply">
+            <EntityTypeMapping TypeName="dbModel.Reply">
+              <MappingFragment StoreEntitySet="Reply">
+                <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Nick" ColumnName="Nick" />
+                <ScalarProperty Name="Rid" ColumnName="Rid" />
+                <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model">
+        <EntityTypeShape EntityType="dbModel.Article" Width="1.5" PointX="0.75" PointY="0.75" Height="1.779012858072917" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.Feedback" Width="1.5" PointX="2.75" PointY="0.75" Height="1.7790128580729174" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.R_ArticleTags" Width="1.5" PointX="0.75" PointY="3.75" Height="1.779012858072917" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.Tags" Width="1.5" PointX="2.75" PointY="3.75" Height="1.7790128580729157" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.Users" Width="1.5" PointX="5.375" PointY="0.75" Height="1.9700325520833317" />
+        <EntityTypeShape EntityType="dbModel.Reply" Width="1.5" PointX="5.375" PointY="3.75" Height="2.1610522460937496" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
