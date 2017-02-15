@@ -83,10 +83,12 @@ namespace MyProject.Controllers
             o.contenthtml = contenthtml;
             if (id == 0)
             {
+                o.addtime = DateTime.Now;
                 db.Article.Add(o);
+                db.SaveChanges();
             }
             db.R_ArticleTags.RemoveRange(db.R_ArticleTags.Where(a => a.articleid == id));
-            db.R_ArticleTags.Add(new R_ArticleTags() { articleid = id, tagid = tagid, addtime = DateTime.Now });
+            db.R_ArticleTags.Add(new R_ArticleTags() { articleid = o.id, tagid = tagid, addtime = DateTime.Now });
             db.SaveChanges();
             return Json(new { id=o.id});
         }

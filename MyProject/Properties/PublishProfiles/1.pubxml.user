@@ -91,7 +91,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2012 15:23:58</publishTime>
     </File>
     <File Include="bin/MyProject.dll">
-      <publishTime>02/15/2017 10:52:12</publishTime>
+      <publishTime>02/15/2017 15:05:42</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>08/03/2014 20:33:56</publishTime>
@@ -328,7 +328,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/05/2017 13:15:09</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
-      <publishTime>01/06/2017 10:40:53</publishTime>
+      <publishTime>02/15/2017 15:19:49</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>01/04/2017 10:26:29</publishTime>
@@ -337,7 +337,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/04/2017 10:26:29</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/15/2017 13:12:38</publishTime>
+      <publishTime>02/15/2017 14:59:20</publishTime>
     </File>
   </ItemGroup>
 </Project>
