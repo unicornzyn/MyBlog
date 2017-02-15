@@ -1,6 +1,12 @@
 ﻿@model MyProject.Models.Article
+@using Microsoft.AspNet.Identity
 
-<h2>@Model.title</h2>
+<h2>@Model.title  
+    @if(Request.IsAuthenticated)
+    {
+        <small><a href="/Manage/Blog/@Request.RequestContext.RouteData.Values["id"]">编辑</a></small>
+    }
+</h2>
 <small style="padding-left:120px;">@Common.St.GetDateTimeString(Model.addtime)</small>
 <div>
     @Html.Raw(Model.contenthtml)
