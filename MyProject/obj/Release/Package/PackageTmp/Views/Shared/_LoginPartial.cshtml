@@ -7,11 +7,12 @@
 
     <ul class="nav navbar-nav navbar-right">
         <li>
-            @Html.ActionLink("添加", "Blog", "Manage",new { id=0}, new { title = "添加新博客" });
+            @*@Html.ActionLink("添加", "Blog", "Manage", new { id = 0 }, new { title = "添加新博客" });*@
+            <a href="/Manage/Blog/0" title="添加新博客">添加</a>
         </li>
         <li>
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "管理" })
-        </li>
+        </li>        
         <li><a href="javascript:document.getElementById('logoutForm').submit()">退出</a></li>
     </ul>
     }
