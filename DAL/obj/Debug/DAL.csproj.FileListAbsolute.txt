@@ -1,5 +1,0 @@
-E:\play\MyProject\DAL\bin\Debug\DAL.dll
-E:\play\MyProject\DAL\bin\Debug\DAL.pdb
-E:\play\MyProject\DAL\obj\Debug\DAL.dll
-E:\play\MyProject\DAL\obj\Debug\DAL.pdb
-E:\play\MyProject\DAL\bin\Debug\DAL.dll.config

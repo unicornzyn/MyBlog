@@ -1,3 +1,4 @@
+E:\play\MyProject\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 E:\play\MyProject\Common\bin\Debug\Common.dll
 E:\play\MyProject\Common\bin\Debug\Common.pdb
 E:\play\MyProject\Common\obj\Debug\Common.dll
