@@ -51,5 +51,8 @@ namespace MyProject.Controllers
         {           
             return View();
         }        
+        //public JsonResult GetReply() { }
+        //[HttpPost]
+        //public JsonResult SaveReply() { }
     }
 }
