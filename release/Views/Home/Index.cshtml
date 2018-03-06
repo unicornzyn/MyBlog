@@ -6,6 +6,6 @@
 @{ 
     foreach (var o in Model)
     {
-        <text><p><a href="/Home/Item/@o.id">@o.title</a><span style="padding-left:10px;">@(Common.St.GetDateTimeString(o.addtime))</span></p></text>
+        <text><p><a href="/Home/Item/@o.id">@o.title</a><span style="padding-left:10px;display:none;">@(Common.St.GetDateTimeString(o.addtime))</span></p></text>
     }
 }
