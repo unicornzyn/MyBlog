@@ -3,3 +3,9 @@ E:\play\MyProject\Common\bin\Debug\Common.dll
 E:\play\MyProject\Common\bin\Debug\Common.pdb
 E:\play\MyProject\Common\obj\Debug\Common.dll
 E:\play\MyProject\Common\obj\Debug\Common.pdb
+E:\play\MyBlog\Common\bin\Debug\Common.dll
+E:\play\MyBlog\Common\bin\Debug\Common.pdb
+E:\play\MyBlog\Common\obj\Debug\Common.csprojAssemblyReference.cache
+E:\play\MyBlog\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\play\MyBlog\Common\obj\Debug\Common.dll
+E:\play\MyBlog\Common\obj\Debug\Common.pdb

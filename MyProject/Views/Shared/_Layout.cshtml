@@ -11,56 +11,49 @@
     @RenderSection("scripts", required: false)
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("我的博客", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("主页", "Index", "Home")</li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">标签<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            @{
-                                foreach (var o in (IList<MyProject.Models.TagsUse>)ViewData["taglist"])
-                                {
-                                    <li><a href="/?tag=@o.id">@(o.tname) (@o.cc)</a></li>
-                                }
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        @Html.ActionLink("我的博客", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">@Html.ActionLink("主页", "Index", "Home", new { area = "" }, new { @class="nav-link"})</li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">标签</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                        @{
+                            foreach (var o in (IList<MyProject.Models.TagsUse>)ViewData["taglist"])
+                            {
+                                <li><a class="dropdown-item" href="/?tag=@o.id">@(o.tname) (@o.cc)</a></li>
                             }
-                           
-                            @*<li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>*@                            
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">收藏链接<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="http://www.cnblogs.com" target="_blank">博客园</a></li>   
-                            <li><a href="http://jquery.com" target="_blank">jQuery</a></li>                            
-                        </ul>
-                    </li>
-                    <li>@Html.ActionLink("关于", "About", "Home")</li>                    
-                </ul>
+                        }
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">收藏链接</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown02">
+                        <li><a class="dropdown-item" href="http://www.cnblogs.com" target="_blank">博客园</a></li>
+                        <li><a class="dropdown-item" href="http://jquery.com" target="_blank">jQuery</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">@Html.ActionLink("关于", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
                 @Html.Partial("_LoginPartial")
-            </div>
+            </form>
         </div>
-    </div>
-    <div class="container body-content">        
-        <div class="row row-offcanvas row-offcanvas-right">
-            <div class="col-md-12">
-                @RenderBody()
-            </div>
-        </div>
-        <hr />
-        <footer>
-            <p>&copy; puddingz.com - @DateTime.Now.Year <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备15011829号</a></p>
-        </footer>
-    </div>
+    </nav>
+
+    <main role="main" class="container">
+        <p>&nbsp;</p>
+        @RenderBody()
+    </main>
+    <footer style="width:100%;text-align:center;">
+        <p>&copy; puddingz.com - @DateTime.Now.Year <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备15011829号</a></p>
+    </footer>
+
 </body>
 </html>
